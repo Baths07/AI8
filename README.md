@@ -65,6 +65,12 @@ Projemizi üç aşamalı sprint planı ile geliştireceğiz. Her sprint sonunda 
 
 **Sprint içinde elde edilmesi tahmin edilen puan :** 30 puan
 
+![0](https://github.com/user-attachments/assets/06893a13-871e-4fab-9711-79a726bbb4f2)
+![1](https://github.com/user-attachments/assets/ca4cdaff-fd73-4301-8809-bb2ec3a3a2f5)
+![2](https://github.com/user-attachments/assets/6b3ca39c-e7a5-425d-af00-3916d41b91d4)
+![3](https://github.com/user-attachments/assets/868608d9-6525-4cc2-bfcf-5e1bf8669989)
+![4](https://github.com/user-attachments/assets/5f2d509e-477e-4798-ab14-a68c223bb8ac)
+
 **Daily Scrum**: Günlük konuşmalar ve toplantı saatlerinin belirlenmesi için Whatsapp üzerinden iletişime geçilmekte ancak toplantılar Zoom ve Google Meet üzerinden gerçekleştirilmektedir. 
 
 **Sprint Review**: Bu sprintte özellikle fikir aşamasına fazlaca zaman ayrılmıştır. Fikir bulunup geliştirildikten sonra adımlar belirlenmiştir. Bu sprintte özellikle uygulanacak olan psikolojik testler ve yaklaşımlar üzerine odaklanılıp teknolojik gereksinimler diğer sprintlerde gerçekleştirilecektir.
