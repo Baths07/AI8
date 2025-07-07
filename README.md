@@ -55,6 +55,8 @@ Projemizi üç aşamalı sprint planı ile geliştireceğiz. Her sprint sonunda 
 
 - **Örnek**: [Beck Depresyon Envanteri](https://androloji.org.tr/androlojiDATA/Document/25112014164858-10-BECK-DEPRESYON-ENVANTERI.pdf)
 
+![sprint1](https://github.com/user-attachments/assets/c32a3b56-c6fa-4c79-80bf-09c644169d9b)
+
 **Karakter testi**: Kullanıcının temel karakter özelliklerini anlamaya yönelik bir karakter testinin sisteme dahil edilmesi.
 
 **Skor → yüzdelik hesaplama (depresyon)**: Kullanıcının test yanıtlarına göre toplam skorun hesaplanması ve bu skorun yüzde cinsinden bir depresyon belirtisi yüzdesi olarak ifade edilmesi.
