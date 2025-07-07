@@ -8,32 +8,36 @@
 ### Takım Üyeleri
 | Name | Title |
 |------|-------|
-| -- | Scrum Master |
-| -- | Developer |
-| -- | Developer |
-| -- | Developer |
-| -- | Developer |
+| Karya Korkmazyiğit | Scrum Master |
+| Bilge Balga | Product Owner |
+| Ömer Faruk Aydön | Developer |
+| Fatma Karabörk | Developer |
+| Batuhan Odabaşoğlu | Developer |
 
 ### Ürün Açıklaması
-Emotia, depresyonla mücadele eden bireylerin duygusal iyi oluşlarını desteklemek ve duygusal farkındalıklarını artırmak amacıyla tasarlanmış yenilikçi bir yapay zeka platformudur. Platformumuz, kullanıcının psikolojik durumunu bilimsel tabanlı bir test ile değerlendirerek kişiselleştirilmiş bir başlangıç noktası sunar. Ardından, kullanıcının yazılı ifadelerinden duygu analizi yaparak, nazik ve empatik geri bildirimler sunar.
+**Emotia, depresyonla mücadele eden bireylerin** duygusal iyi oluşlarını desteklemek ve duygusal farkındalıklarını artırmak amacıyla tasarlanmış yenilikçi bir yapay zeka platformudur. Platformumuz, kullanıcının psikolojik durumunu **bilimsel tabanlı bir test** ile değerlendirerek kişiselleştirilmiş bir başlangıç noktası sunar. Ardından, kullanıcının yazılı ifadelerinden duygu analizi yaparak, nazik ve empatik geri bildirimler sunar.
 
 Amacımız, depresyonun getirdiği duygusal karmaşayı ve donukluğu yaşayan kullanıcıların kendi duygularını daha iyi tanımlamalarına, anlamalarına ve yönetmelerine yardımcı olmaktır. Bu sayede, daha dengeli ve bilinçli bir duygusal yaşam sürmeleri için onlara destek olmayı hedefleriz. Emotia, özellikle depresyon tanısı almış veya depresif belirtiler gösteren bireyler için, mevcut terapi ve destek süreçlerine ek olarak değerli bir araç olmayı amaçlar.
 
 ## Ürün Özellikleri
 
-- **Bilimsel Değerlendirme**: Depresif belirtiler gösteren bireylerin psikolojik durumunu bilimsel tabanlı bir test ile değerlendirerek ilk duygusal analizi başlatma.
+- **Bilimsel Değerlendirme**: _Depresif belirtiler_ gösteren bireylerin psikolojik durumunu bilimsel tabanlı bir test ile değerlendirerek ilk duygusal analizi başlatma.
 
-- **Yapay Zeka Destekli Analiz**: Yapay zekâ destekli analizlerle kullanıcının yazılı duygu ifadelerinden duygu durumunu tanıma ve nazik, yönlendirici geri bildirimler sunma.
+- **Yapay Zeka Destekli Analiz**: Yapay zekâ destekli analizlerle kullanıcının _yazılı duygu ifadelerinden_ duygu durumunu tanıma ve nazik, yönlendirici geri bildirimler sunma.
 
-- **Duygusal Farkındalık Geliştirme**: Kullanıcının kendi duygu tahminleri ile yapay zekâ analizlerini karşılaştırarak, depresyonun getirdiği duygusal donukluğu veya karışıklığı azaltmaya yönelik duygusal farkındalık ve öz-anlayışı geliştirme.
+- **Duygusal Farkındalık Geliştirme**: Kullanıcının kendi duygu tahminleri ile yapay zekâ analizlerini _karşılaştırarak,_ depresyonun getirdiği duygusal donukluğu veya karışıklığı azaltmaya yönelik _duygusal farkındalık ve öz-anlayışı_ geliştirme.
 
-- **Gelişim Takibi**: Zaman içinde kullanıcıların duygusal farkındalık ve iyileşme gelişimini takip etme ve görsel raporlarla sunarak motivasyonlarını artırma.
+- **Gelişim Takibi**: Zaman içinde kullanıcıların _duygusal farkındalık ve iyileşme gelişimini_ takip etme ve _görsel raporlarla_ sunarak motivasyonlarını artırma.
 
 ## Yapay Zekâ Motoru
 
 Emotia projesinin yapay zekâ motoru olarak **Google Gemini API** kullanılacaktır. Gemini'nin gelişmiş doğal dil işleme ve anlamsal anlama yetenekleri, depresyon bağlamındaki kullanıcı ifadelerinden doğru duygu çıkarımları yapmamızı ve kişiselleştirilmiş, empatik geri bildirimler sunmamızı sağlayacaktır.
 
 ## Sprint Planı – Detaylar
+
+#### Puan Tamamlama Mantığı:
+
+3 sprint içinde totalde tüm adımlar yukarıdaki sprintler içerisinde detaylandırılmıştır. Her adım kendi içerisinde önem sıralaması ve gerektirdiği zamana göre puanlandırılmıştır. Tüm adımlar sonunda elde edeceğimiz puan 230’dur.
 
 🎯 **Teslim Tarihi**: 3 Ağustos 2025, 23:59
 
@@ -56,6 +60,14 @@ Projemizi üç aşamalı sprint planı ile geliştireceğiz. Her sprint sonunda 
 **Skor → yüzdelik hesaplama (depresyon)**: Kullanıcının test yanıtlarına göre toplam skorun hesaplanması ve bu skorun yüzde cinsinden bir depresyon belirtisi yüzdesi olarak ifade edilmesi.
 
 **Basit kullanıcı arayüzü (test ekranı + sonuç ekranı)**: Test sorularını gösterecek ve test bitiminde hesaplanan skoru ve yüzdelik depresyon analizini sunacak temel bir kullanıcı arayüzünün geliştirilmesi.
+
+**Sprint içinde elde edilmesi tahmin edilen puan :** 30 puan
+
+**Daily Scrum**: Günlük konuşmalar ve toplantı saatlerinin belirlenmesi için Whatsapp üzerinden iletişime geçilmekte ancak toplantılar Zoom ve Google Meet üzerinden gerçekleştirilmektedir. 
+
+**Sprint Review**: Bu sprintte özellikle fikir aşamasına fazlaca zaman ayrılmıştır. Fikir bulunup geliştirildikten sonra adımlar belirlenmiştir. Bu sprintte özellikle uygulanacak olan psikolojik testler ve yaklaşımlar üzerine odaklanılıp teknolojik gereksinimler diğer sprintlerde gerçekleştirilecektir.
+
+**Sprint Retrospective**: Bu sprint özelinde belki de fikir aşamasına daha az zaman ayırıp front-end çalışmalarına başlanabilirdi. Bu bağlamda diğer sprintler için zamanlama daha iyi planlanmalı ve daha sık toplantılar gerçekleştirilmelidir.
 
 ### Sprint 2: AI Destekli Duygu Tanıma
 
@@ -92,3 +104,5 @@ Projemizi üç aşamalı sprint planı ile geliştireceğiz. Her sprint sonunda 
 **Günlük kaydı arayüzü: geçmiş duygulara erişim**: Kullanıcının geçmiş duygusal girdilerine, yapay zeka analizlerine ve kendi tahminlerine kolayca erişebileceği bir "günlük" veya "geçmiş kayıtlar" arayüzü oluşturma.
 
 **Final ürün testi + sunuma hazırlık**: Uygulamanın uçtan uca kapsamlı testlerinin yapılması, hataların giderilmesi ve projenin potansiyel yatırımcılara veya jüriye sunulmak üzere bir demo ve sunum materyallerinin hazırlanması.
+
+
