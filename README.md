@@ -55,7 +55,14 @@ Projemizi üç aşamalı sprint planı ile geliştireceğiz. Her sprint sonunda 
 
 - **Örnek**: [Beck Depresyon Envanteri](https://androloji.org.tr/androlojiDATA/Document/25112014164858-10-BECK-DEPRESYON-ENVANTERI.pdf)
 
-![sprint1](https://github.com/user-attachments/assets/c32a3b56-c6fa-4c79-80bf-09c644169d9b)
+![ds1](https://github.com/user-attachments/assets/109053f6-6632-456c-b7ca-045a2a7530e5)
+![ds2](https://github.com/user-attachments/assets/9886bd31-cf97-4cae-8abd-1c283e56a179)
+![ds3](https://github.com/user-attachments/assets/b3bdf76c-d8cd-49e5-b315-31e54f384baf)
+![ds4](https://github.com/user-attachments/assets/8c9b5c81-7179-42bb-a91b-bd6d3b1fb024)
+![ds5](https://github.com/user-attachments/assets/e3b33b92-9bc9-49eb-b16e-a1178d2aca92)
+![ds6](https://github.com/user-attachments/assets/430e30d8-3e18-438c-b6b0-2539c265fb1e)
+![ds7](https://github.com/user-attachments/assets/f1aab3f2-d98d-4da8-acae-f1e24d6b3f96)
+
 
 **Karakter testi**: Kullanıcının temel karakter özelliklerini anlamaya yönelik bir karakter testinin sisteme dahil edilmesi.
 
