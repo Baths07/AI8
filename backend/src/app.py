@@ -14,17 +14,15 @@ app = FastAPI(
 )
 
 # CORS ayarları
-# Geliştirme ortamında tüm kaynaklara izin veriyoruz.
-# Üretimde belirli kaynaklara kısıtlama getirilmelidir.
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # Tüm kaynaklara izin ver (geliştirme için)
+    allow_origins=["*"],  
     allow_credentials=True,
     allow_methods=["*"],  # Tüm HTTP metodlarına izin ver
     allow_headers=["*"],  # Tüm başlıklara izin ver
 )
 
-# Basit bir sağlık kontrolü (health check) endpoint'i
+# sağlık kontrolü (health check) endpoint'i
 @app.get('/api/health', status_code=status.HTTP_200_OK)
 async def health_check():
     """
@@ -32,14 +30,7 @@ async def health_check():
     """
     return {"status": "backend ok", "message": "Backend is running!"}
 
-# --- Diğer API rotaları buraya eklenecek ---
-# Örneğin, entry_routes.py'den rotaları dahil etmek için:
-# from .routes import entry_routes
-# app.include_router(entry_routes.router, prefix="/api")
 
-# Uygulama doğrudan çalıştırıldığında (Uvicorn tarafından çalıştırılacak)
-# Bu blok genellikle Dockerfile veya uvicorn komutu ile çalıştırıldığında gerekli değildir.
-# Ancak yerel geliştirme için kullanılabilir.
 if __name__ == "__main__":
     import uvicorn
     port = int(os.getenv('PORT', 5000))
