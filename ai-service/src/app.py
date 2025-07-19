@@ -2,10 +2,13 @@ import os
 from fastapi import FastAPI, HTTPException, status, Body
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
+from services.gemini_service import analyze_sentiment_with_gemini
 from dotenv import load_dotenv
+from pathlib import Path
 
-# .env dosyasındaki ortam değişkenlerini yükle
-load_dotenv()
+# .env dosyasını yükle
+env_path = Path(__file__).resolve().parent.parent / '.env'
+load_dotenv(dotenv_path=env_path)
 
 # FastAPI uygulamasını başlat
 app = FastAPI(
@@ -24,12 +27,12 @@ app.add_middleware(
 )
 
 
-# İstek gövdesi için Pydantic modeli
+# ----------- Pydantic Modelleri -----------
+
 class TextAnalysisRequest(BaseModel):
     text: str
 
 
-# Yanıt gövdesi için Pydantic modeli (placeholder)
 class TextAnalysisResponse(BaseModel):
     label: str
     explanation: str
@@ -37,37 +40,78 @@ class TextAnalysisResponse(BaseModel):
     message: str
 
 
-# Basit bir sağlık kontrolü (health check) endpoint'i
+class EntryRequest(BaseModel):
+    user_id: int
+    text: str
+    user_prediction: str
+    timestamp: str  # ISO 8601 formatı: "2025-07-16T19:30:00Z"
+
+
+class EntryResponse(BaseModel):
+    ai_label: str
+    user_label: str
+    match_score: int
+    confidence: float
+    empathy: str
+    message: str
+
+
+class ReportResponse(BaseModel):
+    total_entries: int
+    positive: int
+    neutral: int
+    negative: int
+    last_update: str
+
+
+# ----------- Endpoint'ler -----------
+
 @app.get('/ai/health', status_code=status.HTTP_200_OK)
 async def ai_health_check():
-    """
-    AI servisinin çalışıp çalışmadığını kontrol eden sağlık kontrolü endpoint'i.
-    """
     return {"status": "Gemini ok", "message": "AI service is running!"}
 
 
-# Duygu analizi için placeholder endpoint
 @app.post('/ai/analyze', response_model=TextAnalysisResponse, status_code=status.HTTP_200_OK)
 async def analyze_text(request_body: TextAnalysisRequest = Body(...)):
-    """
-    Kullanıcı metnini alıp duygu analizi yapan placeholder endpoint.
-    Gerçek Gemini entegrasyonu daha sonra eklenecek.
-    """
     user_text = request_body.text
+    result = analyze_sentiment_with_gemini(user_text)
+    return result
 
-    # Şimdilik sabit bir yanıt dönüyoruz.
-    # Gerçek entegrasyon ai-service/src/services/gemini_service.py içinde yapılacak.
-    dummy_response = {
-        "label": "nötr",
-        "explanation": "Bu bir placeholder yanıttır. Gerçek analiz Gemini API ile yapılacak.",
-        "confidence": 0.5,
-        "message": "Metniniz alındı. Analiz ediliyor..."
+
+@app.post('/ai/entry', response_model=EntryResponse, status_code=status.HTTP_201_CREATED)
+async def create_entry(entry: EntryRequest):
+    # AI analizi
+    ai_result = analyze_sentiment_with_gemini(entry.text)
+
+    ai_label = ai_result.get("label", "")
+    confidence = ai_result.get("confidence", 0.0)
+    empathy = ai_result.get("message", "Kendine iyi bak. Bugün biraz nefes almak iyi gelebilir.")
+
+    match_score = 100 if ai_label == entry.user_prediction else 50
+
+    return {
+        "ai_label": ai_label,
+        "user_label": entry.user_prediction,
+        "match_score": match_score,
+        "confidence": confidence,
+        "empathy": empathy,
+        "message": "Girdi başarıyla alındı"
     }
 
-    return dummy_response
+
+@app.get('/ai/report', response_model=ReportResponse, status_code=status.HTTP_200_OK)
+async def get_report():
+    return {
+        "total_entries": 123,
+        "positive": 45,
+        "neutral": 50,
+        "negative": 28,
+        "last_update": "2025-07-15T22:00:00Z"
+    }
 
 
-# Uygulama doğrudan çalıştırıldığında
+# ----------- Sunucu Başlat -----------
+
 if __name__ == "__main__":
     import uvicorn
 
