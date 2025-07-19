@@ -15,7 +15,7 @@ genai.configure(api_key=GEMINI_API_KEY)
 
 def analyze_sentiment_with_gemini(text: str) -> dict:
     try:
-        # 1. Önce duygu analiz prompt'u oluştur
+        
         prompt = generate_prompt(text)
         model = genai.GenerativeModel("models/gemini-2.5-pro")
         response = model.generate_content(prompt)
@@ -34,16 +34,16 @@ def analyze_sentiment_with_gemini(text: str) -> dict:
                 except:
                     result["confidence"] = 0.5
 
-        # 2. Destekleyici mesaj prompt'u oluştur
+        
         support_prompt = generate_supportive_prompt(
             result["label"], result["explanation"], result["confidence"], text
         )
 
-        # 3. Destekleyici mesaj için ayrı API çağrısı
+        
         support_response = model.generate_content(support_prompt)
         supportive_message = support_response.text or "Empatik mesaj oluşturulamadı."
 
-        # 4. Sonuca ekle
+        
         result["message"] = supportive_message.strip()
 
         return result
