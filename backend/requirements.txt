@@ -1,0 +1,8 @@
+fastapi==0.109.0 # FastAPI framework
+uvicorn==0.27.0.post1 # ASGI sunucusu
+pymongo==4.6.1
+python-dotenv==1.0.0
+python-jose[cryptography]==3.3.0 # JWT için gerekli
+passlib[bcrypt]==1.7.4 # Şifre hashleme için (kullanıcı doğrulama eklendiğinde)
+pydantic==2.6.1 # FastAPI'nin veri validasyonu için kullandığı kütüphane
+pydantic-settings==2.1.0 # Ortam değişkenlerini Pydantic ile yönetmek için

@@ -1,0 +1,40 @@
+version: '3.8'
+
+services:
+  # MongoDB Servisi (Değişiklik Yok)
+  mongodb:
+    image: mongo:latest
+    container_name: emotia-mongodb
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+    networks:
+      - emotia_network
+
+  # Backend Servisi (Ports Bölümü Güncellendi)
+  backend:
+    build: ./backend
+    container_name: emotia-backend
+    ports:
+      - "5001:5000" # BURADA DEĞİŞİKLİK YAPILDI: Host makinede 5001 portunu kullanacak
+    depends_on:
+      - mongodb
+    networks:
+      - emotia_network
+
+  # AI Servisi (Değişiklik Yok)
+  ai-service:
+    build: ./ai-service
+    container_name: emotia-ai-service
+    ports:
+      - "8000:8000"
+    networks:
+      - emotia_network
+
+volumes:
+  mongo_data:
+
+networks:
+  emotia_network:
+    driver: bridge

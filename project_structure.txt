@@ -1,0 +1,46 @@
+emotia/
+├── backend/
+│   ├── src/
+│   │   ├── routes/
+│   │   │   ├── __init__.py
+│   │   │   └── entry_routes.py
+│   │   ├── models/
+│   │   │   ├── __init__.py
+│   │   │   └── entry.py
+│   │   ├── services/
+│   │   │   ├── __init__.py
+│   │   │   └── database_service.py
+│   │   ├── utils/
+│   │   │   ├── __init__.py
+│   │   │   └── error_handler.py
+│   │   └── app.py
+│   ├── tests/
+│   │   ├── __init__.py
+│   │   └── test_entry_routes.py
+│   ├── .env.example
+│   ├── requirements.txt
+│   └── README.md
+├── ai-service/
+│   ├── src/
+│   │   ├── models/
+│   │   │   └── __init__.py
+│   │   ├── services/
+│   │   │   ├── __init__.py
+│   │   │   └── gemini_service.py
+│   │   ├── utils/
+│   │   │   ├── __init__.py
+│   │   │   └── prompt_templates.py
+│   │   └── app.py
+│   ├── tests/
+│   │   ├── __init__.py
+│   │   └── test_gemini_service.py
+│   ├── .env.example
+│   ├── requirements.txt
+│   └── README.md
+├── .github/
+│   └── workflows/
+│       └── ci.yml
+├── .gitignore
+├── docker-compose.yml
+├── README.md
+└── CONTRIBUTING.md
