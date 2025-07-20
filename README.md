@@ -109,6 +109,15 @@ Projemizi üç aşamalı sprint planı ile geliştireceğiz. Her sprint sonunda 
 
 **Backend - Gemini API entegrelerinin tamamlanması**: Google Gemini API ile tüm backend entegrasyonlarının ve ilgili mantığın eksiksiz çalışır hale getirilmesi.
 
+**Daily Scrum**: 
+<img width="1667" height="588" alt="sp0" src="https://github.com/user-attachments/assets/a69b37fa-520b-403a-ba58-e87de7ac0043" />
+<img width="1442" height="603" alt="sp1" src="https://github.com/user-attachments/assets/aea87b83-5672-413a-8c15-beeb398b03d9" />
+<img width="1427" height="667" alt="sp2" src="https://github.com/user-attachments/assets/2b11507a-ab91-404a-810c-0a2047e7e3f0" />
+<img width="1383" height="736" alt="sp3" src="https://github.com/user-attachments/assets/85c586d9-be3f-434b-b26a-06e38aecc4f6" />
+<img width="1016" height="676" alt="sp4" src="https://github.com/user-attachments/assets/a56f6653-b887-4531-be24-c0c30f031e08" />
+<img width="1010" height="777" alt="sp5" src="https://github.com/user-attachments/assets/5396a96e-763b-44c6-9ad0-6bc19eb6fb74" />
+<img width="845" height="735" alt="sp6" src="https://github.com/user-attachments/assets/c04a5e6c-59bf-483d-a56f-fb8468ffb9bd" />
+
 ### Sprint 3: Gelişim Takibi + Demo
 
 📅 **Tarih Aralığı**: 21 Temmuz – 3 Ağustos 2025  
