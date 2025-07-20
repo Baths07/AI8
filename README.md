@@ -45,6 +45,11 @@ Projemizi üç aşamalı sprint planı ile geliştireceğiz. Her sprint sonunda 
 
 **Sprint Board**: [Miro Bağlantısı](https://miro.com/welcomeonboard/UndENS9IVGRlMTlLc1pTK0Y0RC9vaDRHNXI4MXUxU2o1RTIzSDBvUlBGQmZjYVpQK0pFdkZLbENqeVYrOFVWOFpGNG5pWTFaVFhneEsvRk80U2FXdjdmSzRVWUM4MGNFSzhKNCtETDg0Z01VY0hRazkxa0NreUNsS1lUOWtiYzJBd044SHFHaVlWYWk0d3NxeHNmeG9BPT0hdjE=?share_link_id=89999650475)
 
+#### Web sitesinin React ile oluşturulmuş front-end kısmı :
+<img width="1365" height="719" alt="Ekran görüntüsü 2025-07-20 143626" src="https://github.com/user-attachments/assets/06d1e477-87e6-47f2-b828-d185567bdc3b" />
+<img width="1365" height="715" alt="Ekran görüntüsü 2025-07-20 143538" src="https://github.com/user-attachments/assets/ea045b98-ccfd-4f63-912b-28a1d4934dce" />
+
+
 ### Sprint 1: Depresyon Belirti Testi ve İlk Yorumlama
 
 📅 **Tarih Aralığı**: 20 Haziran – 6 Temmuz 2025  
