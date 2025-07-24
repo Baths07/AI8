@@ -7,11 +7,11 @@ router = APIRouter(tags=["Auth"])
 
 @router.post("/register", response_model=UserOut)
 async def register(user: UserCreate):
-    return await register_user(user)
+    return await register_user(user)  # ❗️register_user zaten async, buna dokunmuyoruz
 
 @router.post("/login")
-async def login(user: UserLogin):
-    result = await authenticate_user(user.email, user.password)
+def login(user: UserLogin):  # 🔁 async kaldırıldı
+    result = authenticate_user(user.email, user.password)  # ✅ await kaldırıldı
     if not result:
         raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail="Invalid credentials")
     return {"message": "Login successful", "user": result}
