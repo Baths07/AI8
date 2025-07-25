@@ -1,6 +1,5 @@
 # 📁 data/
 
-This folder contains the core backend application files built with FastAPI.
 
 ## Contents
 
@@ -15,8 +14,7 @@ This folder contains the core backend application files built with FastAPI.
 
 ## Notes
 
-- This folder effectively acts as the backend module of the project.
-- It does not contain real user data; only application logic.
+
 - `__pycache__/` contains Python-generated cache files and can be ignored.
 
 ## Security
