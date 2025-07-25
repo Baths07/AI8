@@ -118,6 +118,10 @@ Projemizi üç aşamalı sprint planı ile geliştireceğiz. Her sprint sonunda 
 <img width="1010" height="777" alt="sp5" src="https://github.com/user-attachments/assets/5396a96e-763b-44c6-9ad0-6bc19eb6fb74" />
 <img width="845" height="735" alt="sp6" src="https://github.com/user-attachments/assets/c04a5e6c-59bf-483d-a56f-fb8468ffb9bd" />
 
+**Daily Buluşmalarımız**:  
+<img width="1512" height="982" alt="dailyScrum" src="https://github.com/user-attachments/assets/b57649f5-c5f7-42e7-ad60-b2903c62ad80" />
+<img width="1512" height="835" alt="dailyscrum-16temmuz" src="https://github.com/user-attachments/assets/491793b6-8c53-47b5-ba93-fd50c5746cdf" />
+
 ### Sprint 3: Gelişim Takibi + Demo
 
 📅 **Tarih Aralığı**: 21 Temmuz – 3 Ağustos 2025  
