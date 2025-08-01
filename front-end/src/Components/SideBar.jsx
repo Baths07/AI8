@@ -2,7 +2,7 @@ import React , {useState} from 'react'
 import { LuPanelLeftClose } from "react-icons/lu";
 
 
-const SideBar = ({open,setOpen ,menü ,setMenü  ,setMenüType}) => {
+const SideBar = ({open,setOpen ,menü ,setMenü  ,setMenüType ,data}) => {
 
     
 
@@ -13,12 +13,12 @@ const SideBar = ({open,setOpen ,menü ,setMenü  ,setMenüType}) => {
             <LuPanelLeftClose size={30} onClick={()=>setOpen(!open)} className='text-[#FFFFFF] hover:cursor-pointer'/>
         </div>
 
-        <div className= {`mt-[80px] mr-0 ${open ? "" : "hidden"}`} >
+        <div className= {`mt-[80px] mr-4 ${open ? "" : "hidden"}`} >
             <p className='text-center  text-[#FFFFFF]'>
-                emin ALi
+                {data.isim}
             </p>
-            <p className="mt-2 text-[#B2ADAD]">
-                eminali@gmail.com
+            <p className="mt-2 mr-4 text-[#B2ADAD]">
+                {data.email}
             </p>
         </div>
 

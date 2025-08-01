@@ -1,22 +1,22 @@
-import Navbar from "./Components/Navbar"
-import SideBar from "./Components/SideBar"
-import Hero from "./Components/Hero"
 import './App.css'
-import {useState} from "react";
-import MenüSection from "./Components/MenüSection"
+import Home from "./Components/Home"
+
+import {Routes, Route} from "react-router-dom"
+import RegisterForm from './Components/RegisterForm'
+import { useState } from 'react'
 
 function App() {
-  const [open ,  setOpen]=useState(true);
-  const [menü , setMenü]= useState(false);
-  const [menüType,setMenüType]=useState("0")
+  const [publicId,setPublicId]=useState("v");
   
 
   return (
-    <div className="bg-[#000000] grid grid-cols-10 grid-rows-[70px_auto]">
-      <Navbar open={open} setOpen={setOpen} />
-      <SideBar open={open} setOpen={setOpen} menü={menü} setMenü={setMenü} setMenüType={setMenüType}/>
-      <Hero open={open} setOpen={setOpen}/>
-      <MenüSection menü={menü} setMenü={setMenü} open={open} menüType={menüType} />
+
+    <div>
+      <Routes>
+        <Route path="/" element={<Home publicId={publicId}/>}/>
+        <Route path="/register" element={<RegisterForm publicId={publicId} setPublicId={setPublicId} />}/>
+      </Routes>
+      
     </div>
     
   )

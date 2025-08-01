@@ -12,12 +12,16 @@ if not GEMINI_API_KEY:
 
 genai.configure(api_key=GEMINI_API_KEY)
 
+print("🔐 Yüklenen GEMINI_API_KEY:", GEMINI_API_KEY)
+
 
 def analyze_sentiment_with_gemini(text: str) -> dict:
     try:
         
         prompt = generate_prompt(text)
         model = genai.GenerativeModel("models/gemini-2.5-pro")
+        #model = genai.GenerativeModel("models/gemini-1.5-pro-latest")
+        
         response = model.generate_content(prompt)
 
         raw = response.text or ""
@@ -42,10 +46,22 @@ def analyze_sentiment_with_gemini(text: str) -> dict:
         
         support_response = model.generate_content(support_prompt)
         supportive_message = support_response.text or "Empatik mesaj oluşturulamadı."
-
+         # Gereksiz başlıkları temizle
+        prefixes_to_remove = [
+            "Elbette, işte o kişiye verilebilecek nazik ve samimi bir cevap:",
+            "İşte size nazik ve samimi bir cevap:",
+            "Nazik ve samimi cevabım:",
+            "Size verebileceğim nazik ve samimi cevap:",
+            "İşte cevabım:"
+        ]
         
-        result["message"] = supportive_message.strip()
+        message = supportive_message.strip()
+        for prefix in prefixes_to_remove:
+            if message.lower().startswith(prefix.lower()):
+                message = message[len(prefix):].strip()
+                break
 
+        result["message"] = message
         return result
 
     except Exception as e:

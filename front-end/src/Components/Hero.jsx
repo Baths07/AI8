@@ -6,20 +6,152 @@ import { IoSend } from "react-icons/io5";
 let n=0;
 const Hero = ({open,setOpen}) => {
 
+    const test =[ 
+       
+        `0. Kendimi üzüntülü ve sıkıntılı hissetmiyorum.
+        1. Kendimi üzüntülü ve sıkıntılı hissediyorum.
+        2. Hep üzüntülü ve sıkıntılıyım. Bundan kurtulamıyorum.
+        3. O kadar üzüntülü ve sıkıntılıyım ki artık dayanamıyorum.
+       `,
+       `
+       0. Gelecek hakkında mutsuz ve karamsar değilim.
+        1. Gelecek hakkında karamsarım.
+        2. Gelecekten beklediğim hiçbir şey yok.
+        3. Geleceğim hakkında umutsuzum ve sanki hiçbir şey düzelmeyecekmiş gibi geliyor. 
+       `,
+       `
+        0. Kendimi başarısız bir insan olarak görmüyorum.
+        1. Çevremdeki birçok kişiden daha çok başarısızlıklarım olmuş gibi hissediyorum.
+        2. Geçmişe baktığımda başarısızlıklarla dolu olduğunu görüyorum.
+        3. Kendimi tümüyle başarısız biri olarak görüyorum. 
+       `,
+       `
+        0. Birçok şeyden eskisi kadar zevk alıyorum.
+        1. Eskiden olduğu gibi her şeyden hoşlanmıyorum.
+        2. Artık hiçbir şey bana tam anlamıyla zevk vermiyor.
+        3. Her şeyden sıkılıyorum.       
+       `,
+       `
+        0. Kendimi herhangi bir şekilde suçlu hissetmiyorum.
+        1. Kendimi zaman zaman suçlu hissediyorum.
+        2. Çoğu zaman kendimi suçlu hissediyorum.
+        3. Kendimi her zaman suçlu hissediyorum. 
+       `,
+       `0. Bana cezalandırılmışım gibi geliyor.
+        1. Cezalandırılabileceğimi hissediyorum.
+        2. Cezalandırılmayı bekliyorum.
+        3. Cezalandırıldığımı hissediyorum. 
+        `,
+        `
+        0. Kendimden memnunum.
+        1. Kendi kendimden pek memnun değilim.
+        2. Kendime çok kızıyorum.
+        3. Kendimden nefret ediyorum.      
+        `,
+        `
+        0. Başkalarından daha kötü olduğumu sanmıyorum.
+        1. Zayıf yanların veya hatalarım için kendi kendimi eleştiririm.
+        2. Hatalarımdan dolayı ve her zaman kendimi kabahatli bulurum.
+        3. Her aksilik karşısında kendimi hatalı bulurum. 
+        `,
+        `
+        0. Kendimi öldürmek gibi düşüncelerim yok.
+        1. Zaman zaman kendimi öldürmeyi düşündüğüm olur. Fakat yapmıyorum.
+        2. Kendimi öldürmek isterdim.
+        3. Fırsatını bulsam kendimi öldürürdüm
+        `,
+        `
+        0. Her zamankinden fazla içimden ağlamak gelmiyor.
+        1. Zaman zaman içinden ağlamak geliyor.
+        2. Çoğu zaman ağlıyorum.
+        3. Eskiden ağlayabilirdim şimdi istesem de ağlayamıyorum.   
+        `,
+        `
+        - 0. Şimdi her zaman olduğumdan daha sinirli değilim.
+        1. Eskisine kıyasla daha kolay kızıyor ya da sinirleniyorum.
+        2. Şimdi hep sinirliyim.
+        3. Bir zamanlar beni sinirlendiren şeyler şimdi hiç sinirlendirmiyor. 
+        `,
+        `
+        0. Başkaları ile görüşmek, konuşmak isteğimi kaybetmedim.
+        1. Başkaları ile eskiden daha az konuşmak, görüşmek istiyorum.
+        2. Başkaları ile konuşma ve görüşme isteğimi kaybetmedim.
+        3. Hiç kimseyle konuşmak görüşmek istemiyorum. 
+        `,
+        `
+        0. Eskiden olduğu gibi kolay karar verebiliyorum.
+        1. Eskiden olduğu kadar kolay karar veremiyorum.
+        2. Karar verirken eskisine kıyasla çok güçlük çekiyorum.
+        3. Artık hiç karar veremiyorum. 
+        `,
+        `
+        0. Aynada kendime baktığımda değişiklik görmüyorum.
+        1. Daha yaşlanmış ve çirkinleşmişim gibi geliyor.
+        2. Görünüşümün çok değiştiğini ve çirkinleştiğimi hissediyorum.
+        3. Kendimi çok çirkin buluyorum. 
+        `,
+        `
+        0. Eskisi kadar iyi çalışabiliyorum.
+        1. Bir şeyler yapabilmek için gayret göstermem gerekiyor.
+        2. Herhangi bir şeyi yapabilmek için kendimi çok zorlamam gerekiyor.
+        3. Hiçbir şey yapamıyorum
+        `,
+        `
+        0. Her zamanki gibi iyi uyuyabiliyorum.
+        1. Eskiden olduğu gibi iyi uyuyamıyorum.
+        2. Her zamankinden 1-2 saat daha erken uyanıyorum ve tekrar uyuyamıyorum.
+        3. Her zamankinden çok daha erken uyanıyor ve tekrar uyuyamıyorum
+        `,
+        `
+         0. Her zamankinden daha çabuk yorulmuyorum.
+        1. Her zamankinden daha çabuk yoruluyorum.
+        2. Yaptığım her şey beni yoruyor.
+        3. Kendimi hemen hiçbir şey yapamayacak kadar yorgun hissediyorum. 
+        `,
+        `
+        0. İştahım her zamanki gibi.
+        1. İştahım her zamanki kadar iyi değil.
+        2. İştahım çok azaldı.
+        3. Artık hiç iştahım yok. 
+        `,
+        `
+        0. Son zamanlarda kilo vermedim.
+        1. İki kilodan fazla kilo verdim.
+        2. Dört kilodan fazla kilo verdim.
+        3. Altı kilodan fazla kilo vermeye çalışıyorum. 
+        `,
+        `
+        0. Sağlığım beni fazla endişelendirmiyor.
+        1. Ağrı, sancı, mide bozukluğu veya kabızlık gibi rahatsızlıklar beni endişelendirmiyor.
+        2. Sağlığım beni endişelendirdiği için başka şeyleri düşünmek zorlaşıyor.
+        3. Sağlığım hakkında o kadar endişeliyim ki başka hiçbir şey düşünemiyorum. 
+        `,
+        `
+         0. Son zamanlarda cinsel konulara olan ilgimde bir değişme fark etmedim.
+        1. Cinsel konularla eskisinden daha az ilgiliyim.
+        2. Cinsel konularla şimdi çok daha az ilgiliyim.
+        3. Cinsel konular olan ilgimi tamamen kaybettim.
+        `
+
+    ]
+
     const [message , setMessage] = useState("");
     const [response , setResponse]=useState("");
     const [isResponseScreen , setisResponseScreen]= useState(false)
+    const [isDepression , setIsDepression]=useState(true);
+    const [number,setNumber]=useState(0);
+    const [point,setPoint]=useState(0);
+    const [DepStatus,setDepStatus]=useState("");
     const [messages , setMessages] =useState(
         [
         {
-            text: null ,
+            text:null,
             isBot:false
         },
         {
             text:null,
             isBot:true
         }
-
     ]
     ) ;
 
@@ -32,26 +164,36 @@ const Hero = ({open,setOpen}) => {
 
         const inputRef = useRef(null);
 
+       
+
         //fetch
         async function postData() {
-  try {
-    const res = await fetch('https://jsonplaceholder.typicode.com/posts', {
+            
+
+            try {
+    const res = await fetch("http://localhost:8000/ai/entry", {
       method: 'POST', // HTTP yöntemi
       headers: {
         'Content-Type': 'application/json' // Gönderilen veri tipi
       },
       body: JSON.stringify({
-        body: message,
-        userId: 1
+        user_id: 101,
+        text: message,
+        user_prediction: DepStatus,
+        timestamp: new Date().toISOString()
       }) // JSON verisini string'e çeviriyoruz
     });
 
     const data = await res.json();
     console.log('Gelen yanıt:', data);
-    return data.body;
+    console.log(data.empathy)
+
+    return data.empathy;
+    
   } catch (error) {
     console.error('Hata oluştu:', error);
   }
+  
 }
         
 /*
@@ -75,9 +217,63 @@ const Hero = ({open,setOpen}) => {
 
         */
 
+       useEffect(() => {
+            if (!isDepression && DepStatus !== "") {
+                setMessages([
+                ...messages,
+                
+                { text: `senin durumun : ${DepStatus}`, isBot: true }
+                ]);
+            }
+            }, [DepStatus]);
+                    
      const  handleSend= async (e)=>{
 
         e.preventDefault();
+
+        if(isDepression){
+            
+        setisResponseScreen(true);
+        setMessages([
+            ...messages , 
+            {
+                text:message,
+                isBot:false
+            },
+            {
+                text: test[number],
+                isBot:true
+            }
+        ]);
+
+        const parsed = parseInt(message.trim());
+
+        if (!isNaN(parsed)) {
+        setPoint(p => p + parsed);
+        }
+
+       
+
+        
+        setNumber(p=>p+1)
+
+        setMessage("");
+        inputRef.current?.focus();
+
+        if(number==1){
+            console.log(point)
+            setIsDepression(false);
+            if(point<10) setDepStatus("Minimal Depresyon")
+            else if (point >=10 && point<17) setDepStatus("Hafif depresyon")
+            else if (point >=17 && point<30) setDepStatus("Orta depresyon")
+            else if (point >=30 && point<64) setDepStatus("Şiddetli depresyon")
+
+            
+          }
+
+        return;
+
+        }
 
         let res = await postData();
 
@@ -112,7 +308,7 @@ const Hero = ({open,setOpen}) => {
                 <div className="flex flex-col ml-auto w-full h-[60vh] 	overflow-y-auto">
                                      
                             {messages.map((text,i) => 
-                                 text.isBot ?
+                                 text.text !==null && (text.isBot ?
 
                                     <div className='mr-auto  rounded-4xl mt-[40px] ml-[120px] break-words'>
                                         <p className='my-2 mx-6  text-[#ffffff] self-center '>
@@ -127,6 +323,7 @@ const Hero = ({open,setOpen}) => {
 
                                     </p>
                                 </div>
+                                 )
                                 
                             )}
 

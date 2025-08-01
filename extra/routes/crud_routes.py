@@ -10,7 +10,7 @@ def create(user: UserCreate):
 
 @router.get("/{user_id}", response_model=UserOut)
 def read(user_id: str):
-    user = get_user_by_id(user_id)
+    user =  get_user_by_id(user_id)
     if not user:
         raise HTTPException(status_code=404, detail="User not found")
     return user
@@ -24,7 +24,7 @@ def update(user_id: str, user: UserUpdate):
 
 @router.delete("/{user_id}")
 def delete(user_id: str):
-    success = delete_user(user_id)
+    success =  delete_user(user_id)
     if not success:
         raise HTTPException(status_code=404, detail="User not found")
     return {"message": "User deleted successfully"}

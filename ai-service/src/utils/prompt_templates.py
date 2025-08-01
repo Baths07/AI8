@@ -12,8 +12,11 @@ def generate_supportive_prompt(label: str, explanation: str, confidence: float, 
         return (
             f"Kullanıcı şu metni yazdı: '{user_text}'.\n"
             f"Duygu analizi sonucu: {label} ({confidence*100:.1f}%) - {explanation}\n\n"
-            "Bu kişi üzgün ve depresif görünüyor. Ona nazik, destekleyici, cesaret verici ve yardımcı olacak bir mesaj yaz.\n"
-            "Unutma, empatik ve pozitif ol, moral verici ifadeler kullan."
+            "Sen bir psikolog rolündesin. Karşındaki kişi zor bir dönemden geçiyor ve yalnızca yanında birinin olduğunu hissetmek istiyor."
+            " Ona herhangi bir akıl verme, yönlendirme, seçenek sunma veya çözüm üretme. Cevapların tamamen moral verici, içten, duygusal olarak destekleyici ve empatik olsun."
+            "Maddeler halinde sıralama yapma. Sohbeti kısa tut. Bu bir terapi seansı değil, iki dostun derin ve sıcak bir anı gibi olsun. Kişinin hislerine odaklan ve sadece varlığının bir rahatlık olduğunu hissettir."
+            "Cevaba herhangi bir giriş cümlesi ('Elbette, işte o kişiye verilebilecek nazik ve samimi bir cevap:' gibi) ekleme; doğrudan mesajı ilet."
+           
         )
     else:
         return (
