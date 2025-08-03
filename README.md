@@ -138,4 +138,11 @@ Projemizi üç aşamalı sprint planı ile geliştireceğiz. Her sprint sonunda 
 
 **Final ürün testi + sunuma hazırlık**: Uygulamanın uçtan uca kapsamlı testlerinin yapılması, hataların giderilmesi ve projenin potansiyel yatırımcılara veya jüriye sunulmak üzere bir demo ve sunum materyallerinin hazırlanması.
 
+<img width="1205" height="226" alt="ss1" src="https://github.com/user-attachments/assets/e3056423-1988-4f76-8c83-7ce2f148de47" />
+<img width="1198" height="286" alt="ss2" src="https://github.com/user-attachments/assets/dc88abb0-d282-4a49-ae66-8e1c06f713fa" />
+<img width="1198" height="332" alt="ss3" src="https://github.com/user-attachments/assets/936380fa-b95b-4ded-b0ca-1abbcbcea958" />
+<img width="1188" height="411" alt="ss4" src="https://github.com/user-attachments/assets/a413b0f1-66c7-4cc2-8dd7-5ccb884f668c" />
+<img width="1188" height="461" alt="ss5" src="https://github.com/user-attachments/assets/1e59e83b-cbae-48bc-ac9c-e9b45823b104" />
+<img width="1193" height="522" alt="ss6" src="https://github.com/user-attachments/assets/dcbdd616-121d-46f7-99ea-eeb79b0b2cbd" />
+<img width="476" height="676" alt="ss7" src="https://github.com/user-attachments/assets/28833216-3a66-42bc-a4e8-e3fbf3aed52a" />
 
