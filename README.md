@@ -147,6 +147,7 @@ Projemizi üç aşamalı sprint planı ile geliştireceğiz. Her sprint sonunda 
 <img width="476" height="676" alt="ss7" src="https://github.com/user-attachments/assets/28833216-3a66-42bc-a4e8-e3fbf3aed52a" />
 
 **Daily Buluşmalarımız**:  
+
 <img width="1495" height="890" alt="meet" src="https://github.com/user-attachments/assets/f4fa2f5b-307f-44d2-aa23-91152f5229d3" />
 <img width="1502" height="939" alt="son daily" src="https://github.com/user-attachments/assets/cc968f5c-98bf-4a03-9113-d835b4b06753" />
 
