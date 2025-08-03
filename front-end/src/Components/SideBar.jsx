@@ -2,7 +2,7 @@ import React , {useState} from 'react'
 import { LuPanelLeftClose } from "react-icons/lu";
 
 
-const SideBar = ({open,setOpen ,menü ,setMenü  ,setMenüType ,data}) => {
+const SideBar = ({open,setOpen ,menü ,setMenü  ,setMenüType ,data,setKarakter,karakter}) => {
 
     
 

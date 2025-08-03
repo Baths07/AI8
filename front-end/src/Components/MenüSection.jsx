@@ -5,7 +5,7 @@ import { GiThreeFriends } from "react-icons/gi";
 import { TbClover } from "react-icons/tb";
 import { FaRegLaugh } from "react-icons/fa";
 
-const MenüSection = ({menü , setMenü , open, menüType}) => {
+const MenüSection = ({menü , setMenü , open, menüType,setKarakter,karakter}) => {
 
   const [textarea,setTextarea]=useState("")
 
@@ -25,8 +25,9 @@ const MenüSection = ({menü , setMenü , open, menüType}) => {
             {
               menüType==="1" 
               ? <div>merhaba</div>
-              : menüType==="2" 
-              ?<div className="flex flex-col">
+              : (menüType==="2" && !karakter)
+              ?
+              <div className="flex flex-col">
                 <div className='flex gap-4 m-4 justify-center'>
                   <GiLovers size={50}/>
                   <GrUserManager size={50} />
@@ -48,6 +49,23 @@ const MenüSection = ({menü , setMenü , open, menüType}) => {
 
               </div>
 
+              : (menüType==="2" && karakter)
+              ? <div className='flex flex-col gap-[6px] m-4 items-center'>
+
+                <p className="text-bold text-[20px] p-2"> Şiddetli depresyon</p>
+
+                <p className="text-[14px] p-3 ">Şiddetli depresyon, kişinin ruhsal, zihinsel ve bedensel sağlığını derinden 
+                  etkileyen ciddi bir durumdur.
+                   Bu kişiler kendilerini sürekli üzgün, boşlukta ve çökkün hissederler;
+                    hiçbir şeyden zevk alamaz, hayata karşı ilgilerini kaybederler. 
+                    Günlük aktiviteler zorlaşır, basit kararlar bile yorucu hale gelir. Uyku düzenleri bozulur; 
+                    ya uykusuzluk çekerler ya da günün büyük kısmını uyuyarak geçirirler. İştahları değişir, kilo kaybı
+                     ya da artışı yaşanabilir. Enerji eksikliği ve halsizlik yaygındır. Zihinsel bulanıklık, unutkanlık ve 
+                     odaklanma güçlüğü görülür. </p>
+                
+
+              </div>
+
               : menüType==="3" 
               ? <div className="m-4 flex flex-col items-center ">
                 <p className="text-center">Merhaba bizim hakkımızda görüşlerini bildirmek ister misin ?</p>
@@ -56,24 +74,31 @@ const MenüSection = ({menü , setMenü , open, menüType}) => {
                 </div>
               :
               <div className="flex flex-col m-4">
-                <h2 className="text-center text-[24px] font-semibold">Hakkımızda</h2>
-                <p className="mt-2 yext-[16px] text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Eaque nam obcaecati quasi quia necessitatibus ea alias aliquid eum deserunt esse.</p>
+                <h2 className="text-center text-[20px] font-semibold">Hakkımızda</h2>
+                <p className="mt-2 text-[12px] text-center">Merhabalar biz kendini yapay zeka alanında geliştirmek isteyen ve bu alanın
+                  insanlar arasındaki iletişimi güçlendireceğine inanan bir öğrenci grubuyuz ve inanç doğrultusunda ise bu yapay zeka sistemi ile
+                    insanlara yardımcı olmayı hedefliyoruz.
+                  
+                </p>
 
 
-                <div className='mt-3'>
-                  <p className="text-[16px] font-bold">ÖmerFaruk Aydön</p>
-                  <p  className="text-[12px]">omerfarukaydon@gmail.com</p>
+                <div className='mt-2'>
+                  <p className="text-[16px] font-bold">Bilge Balga</p>
+                  <p  className="text-[12px]">bilbalga@gmail.com</p>
                 </div>
-                <div className='mt-3'>
-                  <p className="text-[16px] font-bold">ÖmerFaruk Aydön</p>
-                  <p  className="text-[12px]">omerfarukaydon@gmail.com</p>
+                <div className='mt-2'>
+                  <p className="text-[16px] font-bold">Karya Korkmazyiğit</p>
+                  <p  className="text-[12px]">karyakorkazyıgıt@gmail.com</p>
                 </div>
-                <div className='mt-3'>
-                  <p className="text-[16px] font-bold">ÖmerFaruk Aydön</p>
-                  <p  className="text-[12px]">omerfarukaydon@gmail.com</p>
+                <div className='mt-2'>
+                  <p className="text-[16px] font-bold">Batuhan Odabaşoğlu</p>
+                  <p  className="text-[12px]">batuhanodabasoglu@gmail.com</p>
                 </div>
-               <div className='mt-3'>
+               <div className='mt-2'>
+                  <p className="text-[16px] font-bold">Fatma Karabörk</p>
+                  <p  className="text-[12px]">karaborkfatma59@gmail.com</p>
+                </div>
+                 <div className='mt-2'>
                   <p className="text-[16px] font-bold">ÖmerFaruk Aydön</p>
                   <p  className="text-[12px]">omerfarukaydon@gmail.com</p>
                 </div>

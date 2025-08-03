@@ -9,6 +9,7 @@ const Home = ({publicId}) => {
     const [menü , setMenü]= useState(false);
     const [menüType,setMenüType]=useState("0")
     const [data, setData]=useState({})
+    const [karakter, setKarakter]=useState(false)
 
     useEffect(()=>{
         fetch(`http://localhost:8000/users/${publicId}`)
@@ -29,9 +30,9 @@ const Home = ({publicId}) => {
   return (
     <div className="bg-[#000000] grid grid-cols-10 grid-rows-[70px_auto]">
       <Navbar open={open} setOpen={setOpen} />
-      <SideBar open={open} data={data} setOpen={setOpen} menü={menü} setMenü={setMenü} setMenüType={setMenüType}/>
-      <Hero open={open} setOpen={setOpen} data={data}/>
-      <MenüSection menü={menü} setMenü={setMenü} open={open} menüType={menüType} />
+      <SideBar open={open} data={data} setOpen={setOpen} menü={menü} setMenü={setMenü} setMenüType={setMenüType} karakter={karakter} setKarakter={setKarakter}/>
+      <Hero open={open} setOpen={setOpen} data={data} karakter={karakter} setKarakter={setKarakter}/>
+      <MenüSection menü={menü} setMenü={setMenü} open={open} menüType={menüType} karakter={karakter} setKarakter={setKarakter}/>
       </div>
   )
 }

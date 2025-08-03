@@ -4,20 +4,22 @@ import { IoIosArrowForward } from "react-icons/io";
 import { IoSend } from "react-icons/io5";
 
 let n=0;
-const Hero = ({open,setOpen}) => {
+const Hero = ({open,setOpen,karakter,setKarakter}) => {
 
     const test =[ 
        
-        `0. Kendimi üzüntülü ve sıkıntılı hissetmiyorum.
+        `Merhaba , kendini tanıma yolculuğuna başlamadan önce seni daha iyi tanımak için bir karakter testi uygulayalım.Aşağdaki soruları yönergelere göre puanla sonrasında ise beraber sohbete başlayalım.
+        0. Kendimi üzüntülü ve sıkıntılı hissetmiyorum.
         1. Kendimi üzüntülü ve sıkıntılı hissediyorum.
         2. Hep üzüntülü ve sıkıntılıyım. Bundan kurtulamıyorum.
-        3. O kadar üzüntülü ve sıkıntılıyım ki artık dayanamıyorum.
-       `,
+        3. O kadar üzüntülü ve sıkıntılıyım ki artık dayanamıyorum.`
+
+       ,
        `
-       0. Gelecek hakkında mutsuz ve karamsar değilim.
-        1. Gelecek hakkında karamsarım.
-        2. Gelecekten beklediğim hiçbir şey yok.
-        3. Geleceğim hakkında umutsuzum ve sanki hiçbir şey düzelmeyecekmiş gibi geliyor. 
+       0. Gelecek hakkında mutsuz ve karamsar değilim.\n
+        1. Gelecek hakkında karamsarım.\n
+        2. Gelecekten beklediğim hiçbir şey yok.\n
+        3. Geleceğim hakkında umutsuzum ve sanki hiçbir şey düzelmeyecekmiş gibi geliyor.\n 
        `,
        `
         0. Kendimi başarısız bir insan olarak görmüyorum.
@@ -222,7 +224,18 @@ const Hero = ({open,setOpen}) => {
                 setMessages([
                 ...messages,
                 
-                { text: `senin durumun : ${DepStatus}`, isBot: true }
+                { text: `Senin durumun : ${DepStatus} ki bu durumun genel olarak özellikleri şöyledir : Şiddetli depresyon, kişinin ruhsal, zihinsel ve bedensel sağlığını derinden 
+                  etkileyen ciddi bir durumdur.
+                   Bu kişiler kendilerini sürekli üzgün, boşlukta ve çökkün hissederler;
+                    hiçbir şeyden zevk alamaz, hayata karşı ilgilerini kaybederler. 
+                    Günlük aktiviteler zorlaşır, basit kararlar bile yorucu hale gelir. Uyku düzenleri bozulur; 
+                    ya uykusuzluk çekerler ya da günün büyük kısmını uyuyarak geçirirler. İştahları değişir, kilo kaybı
+                     ya da artışı yaşanabilir. Enerji eksikliği ve halsizlik yaygındır. Zihinsel bulanıklık, unutkanlık ve 
+                     odaklanma güçlüğü görülür. Kendilerini değersiz hisseder, geçmişteki hatalar için aşırı suçluluk duyarlar.
+                      Geleceğe dair karamsarlık baskındır, hiçbir şeyin düzelmeyeceğine inanabilirler. Bazı 
+                      kişiler için ölüm düşünceleri ya da intihar isteği bile gündeme gelebilir.
+                
+                `, isBot: true }
                 ]);
             }
             }, [DepStatus]);
@@ -260,13 +273,16 @@ const Hero = ({open,setOpen}) => {
         setMessage("");
         inputRef.current?.focus();
 
-        if(number==1){
+        if(number==21){
             console.log(point)
             setIsDepression(false);
             if(point<10) setDepStatus("Minimal Depresyon")
             else if (point >=10 && point<17) setDepStatus("Hafif depresyon")
             else if (point >=17 && point<30) setDepStatus("Orta depresyon")
             else if (point >=30 && point<64) setDepStatus("Şiddetli depresyon")
+
+            setKarakter(true)
+
 
             
           }
@@ -310,7 +326,7 @@ const Hero = ({open,setOpen}) => {
                             {messages.map((text,i) => 
                                  text.text !==null && (text.isBot ?
 
-                                    <div className='mr-auto  rounded-4xl mt-[40px] ml-[120px] break-words'>
+                                    <div className='mr-auto  rounded-4xl mt-[40px] ml-[120px] break-words w-[60%]'>
                                         <p className='my-2 mx-6  text-[#ffffff] self-center '>
                                             {text.text}
                                         </p>
@@ -371,12 +387,15 @@ const Hero = ({open,setOpen}) => {
 
                     <div>
                         <p className="text-[#FFFFFF] mt-[10px] text-center text-[44px] font-semibold">
-                            Emotia ile destel al.<br></br>Sorunlarını çöz. Kendini al.
+                            Emotia ile destel al.<br></br>Sorunlarını çöz. Kendini anla.
                         </p>
 
                         <p className="text-[#b7b6b6] mt-[16px] text-center text-wrap">
-                            Lorem ipsum dolor sit amet consectetur, adipisicing elit.<br/> Expedita a ut, aut accusamus esse placeat enim temporibus harum unde nesciunt praesentium 
-                            totam ad id commodi cum eos maxime sunt vitae.
+                            Empatia, duygularını anlamana ve yönetmene yardımcı olan yapay zekâ destekli dijital bir yol arkadaşıdır.
+                             
+                        </p>
+                         <p className="text-[#b7b6b6] mt-[16px] text-center text-wrap">
+                            Sessiz kalma, Empatia ile içini özgürce paylaş.
                         </p>
                     </div>
 
